@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary">
               <BriefcaseBusiness className="h-7 w-7" />
-              <span>FinAI Advisor</span>
+              <span>Horizont</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Transformando las finanzas con datos inteligentes y colaboración AI-humano.
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 flex flex-col items-center justify-between sm:flex-row">
-          <p className="text-sm text-muted-foreground">&copy; {currentYear} FinAI Advisor. Todos los derechos reservados.</p>
+          <p className="text-sm text-muted-foreground">&copy; {currentYear} Horizont. Todos los derechos reservados.</p>
           <div className="mt-4 flex space-x-6 sm:mt-0">
             <Link href="#" className="text-muted-foreground hover:text-primary">
               <Linkedin className="h-5 w-5" />

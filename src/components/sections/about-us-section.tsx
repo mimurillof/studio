@@ -12,7 +12,7 @@ export function AboutUsSection() {
             <div className="aspect-video overflow-hidden rounded-lg shadow-2xl">
               <Image
                 src="https://placehold.co/600x400.png"
-                alt="Equipo de FinAI Advisor trabajando en innovación financiera"
+                alt="Equipo de Horizont trabajando en innovación financiera"
                 width={600}
                 height={400}
                 className="w-full h-full object-cover"
@@ -25,7 +25,7 @@ export function AboutUsSection() {
               Nuestra Misión: Impulsando la Innovación Financiera
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              En FinAI Advisor, estamos dedicados a democratizar el acceso a herramientas de análisis financiero de nivel experto. Creemos en la sinergia entre la inteligencia artificial y el conocimiento humano para desbloquear nuevas oportunidades de inversión y empoderar a nuestros usuarios para que tomen decisiones financieras más inteligentes y seguras.
+              En Horizont, estamos dedicados a democratizar el acceso a herramientas de análisis financiero de nivel experto. Creemos en la sinergia entre la inteligencia artificial y el conocimiento humano para desbloquear nuevas oportunidades de inversión y empoderar a nuestros usuarios para que tomen decisiones financieras más inteligentes y seguras.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
               Nuestro equipo está compuesto por expertos en finanzas, científicos de datos e ingenieros de software apasionados por construir el futuro de la tecnología financiera.

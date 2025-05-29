@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
           <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           
           <h2>1. Introducción</h2>
-          <p>Bienvenido a FinAI Advisor. Nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y salvaguardamos tu información cuando visitas nuestro sitio web y utilizas nuestros servicios.</p>
+          <p>Bienvenido a Horizont. Nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y salvaguardamos tu información cuando visitas nuestro sitio web y utilizas nuestros servicios.</p>
 
           <h2>2. Información que Recopilamos</h2>
           <p>Podemos recopilar información personal identificable, como tu nombre, dirección de correo electrónico, y cualquier otra información que nos proporciones voluntariamente.</p>

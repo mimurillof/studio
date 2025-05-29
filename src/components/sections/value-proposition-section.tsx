@@ -31,7 +31,7 @@ export function ValuePropositionSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            ¿Por Qué FinAI Advisor?
+            ¿Por Qué Horizont?
           </h2>
           <p className="mt-4 text-xl text-muted-foreground">
             Nuestra ventaja tecnológica para transformar tu enfoque de inversión.

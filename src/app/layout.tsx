@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'FinAI Advisor',
+  title: 'Horizont',
   description: 'Transformando las finanzas con Datos Inteligentes.',
 };
 

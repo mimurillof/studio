@@ -86,7 +86,7 @@ export function ContactSection() {
                 style={{border:0}} 
                 allowFullScreen={false} 
                 loading="lazy"
-                title="Ubicación de FinAI Advisor"
+                title="Ubicación de Horizont"
                 className="rounded-md shadow-md"
                 data-ai-hint="city map"
               ></iframe>

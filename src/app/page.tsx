@@ -19,9 +19,9 @@ export default async function HomePage() {
     // Fallback or default testimonials
     testimonialsData = {
       testimonials: [
-        { author: "Elena Vítores", title: "Analista Financiera Senior", text: "FinAI Advisor ha revolucionado nuestra capacidad de análisis. La combinación de IA y supervisión humana es simplemente brillante." },
+        { author: "Elena Vítores", title: "Analista Financiera Senior", text: "Horizont ha revolucionado nuestra capacidad de análisis. La combinación de IA y supervisión humana es simplemente brillante." },
         { author: "Marcos Jiménez", title: "Inversor Particular", text: "Como inversor, valoro la claridad y precisión. Esta plataforma me da la confianza para tomar decisiones informadas." },
-        { author: "Sofía Lorente", title: "Gestora de Carteras", text: "La eficiencia y los insights que obtenemos con FinAI Advisor son inigualables. Una herramienta esencial en el mercado actual." },
+        { author: "Sofía Lorente", title: "Gestora de Carteras", text: "La eficiencia y los insights que obtenemos con Horizont son inigualables. Una herramienta esencial en el mercado actual." },
       ]
     };
   }

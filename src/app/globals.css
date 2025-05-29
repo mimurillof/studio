@@ -9,96 +9,85 @@ body {
 
 @layer base {
   :root {
-    --background: 220 13% 15%; /* #212529 Very dark desaturated blue */
-    --foreground: 210 40% 98%; /* Light gray/white */
+    --background: 0 0% 0%; /* #000000 Negro */
+    --foreground: 240 2% 72%; /* #B8B6B7 Gris claro */
 
-    --card: 225 55% 22%; /* #192A56 Deep navy blue */
-    --card-foreground: 210 40% 98%;
+    --card: 195 60% 25%; /* #165467 Azul oscuro/teal */
+    --card-foreground: 240 2% 72%;
 
-    --popover: 225 55% 18%; /* Darker navy */
-    --popover-foreground: 210 40% 98%;
+    --popover: 195 60% 20%; /* Más oscuro que card */
+    --popover-foreground: 240 2% 72%;    --primary: 195 61% 53%; /* #36A8DC Azul claro principal */
+    --primary-foreground: 0 0% 100%; /* Blanco puro sobre azul */
 
-    --primary: 145 63% 49%; /* #2ecc71 Emerald green for CTAs */
-    --primary-foreground: 0 0% 100%; /* White text on emerald green */
+    --secondary: 0 0% 100%; /* Blanco puro para elementos secundarios */
+    --secondary-foreground: 0 0% 0%; /* Negro sobre blanco */
 
-    --secondary: 225 55% 30%; /* Lighter shade of navy */
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 220 10% 30%;
-    --muted-foreground: 210 20% 65%;
-
-    --accent: 225 55% 40%; /* A different shade of navy or a subtle accent for hover states etc. */
-    --accent-foreground: 210 40% 98%;
+    --muted: 240 2% 20%; /* Gris oscuro basado en la paleta */
+    --muted-foreground: 240 2% 60%;    --accent: 0 0% 100%; /* Blanco puro para acentos */
+    --accent-foreground: 0 0% 0%; /* Negro sobre blanco */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 225 55% 28%; /* Slightly lighter navy for borders */
-    --input: 220 13% 20%; /* Slightly lighter than bg for inputs */
-    --ring: 145 63% 55%; /* Lighter emerald green for focus rings */
+    --border: 195 60% 30%; /* Azul oscuro para bordes */
+    --input: 0 0% 10%; /* Negro ligeramente gris para inputs */
+    --ring: 195 61% 53%; /* Azul claro para focus rings */
 
     --radius: 0.5rem;
-    
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+      --chart-1: 195 61% 53%; /* #36A8DC */
+    --chart-2: 195 60% 25%; /* #165467 */
+    --chart-3: 240 2% 72%; /* #B8B6B7 */
+    --chart-4: 0 0% 100%; /* Blanco puro */
+    --chart-5: 0 0% 0%; /* Negro puro */
 
-    /* Sidebar variables updated for consistency with dark theme */
-    --sidebar-background: 225 55% 18%; 
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 145 63% 49%; 
+    /* Sidebar variables actualizadas para la nueva paleta azul */
+    --sidebar-background: 195 60% 20%; 
+    --sidebar-foreground: 240 2% 72%;
+    --sidebar-primary: 195 61% 53%; 
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 55% 25%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 225 55% 28%;
-    --sidebar-ring: 145 63% 55%;
+    --sidebar-accent: 195 60% 30%;
+    --sidebar-accent-foreground: 240 2% 72%;
+    --sidebar-border: 195 60% 25%;
+    --sidebar-ring: 195 61% 53%;
   }
-
   .dark {
-    /* Ensure .dark class also uses the same dark theme values */
-    --background: 220 13% 15%;
-    --foreground: 210 40% 98%;
+    /* Tema oscuro con la nueva paleta azul */
+    --background: 0 0% 0%; /* Negro */
+    --foreground: 240 2% 72%; /* Gris claro */
 
-    --card: 225 55% 22%;
-    --card-foreground: 210 40% 98%;
+    --card: 195 60% 25%; /* Azul oscuro */
+    --card-foreground: 240 2% 72%;
 
-    --popover: 225 55% 18%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 195 60% 20%;
+    --popover-foreground: 240 2% 72%;    --primary: 195 61% 53%; /* Azul claro principal */
+    --primary-foreground: 0 0% 100%; /* Blanco puro */
 
-    --primary: 145 63% 49%;
-    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 100%; /* Blanco puro */
+    --secondary-foreground: 0 0% 0%; /* Negro sobre blanco */
 
-    --secondary: 225 55% 30%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 220 10% 30%;
-    --muted-foreground: 210 20% 65%;
-
-    --accent: 225 55% 40%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 240 2% 20%;
+    --muted-foreground: 240 2% 60%;    --accent: 0 0% 100%; /* Blanco puro para elementos destacados */
+    --accent-foreground: 0 0% 0%; /* Negro sobre blanco */
 
     --destructive: 0 62.8% 30.6%; /* Default dark destructive */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 225 55% 28%;
-    --input: 220 13% 20%;
-    --ring: 145 63% 55%;
-    
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 195 60% 30%;
+    --input: 0 0% 10%;
+    --ring: 195 61% 53%;
+      --chart-1: 195 61% 53%; /* #36A8DC */
+    --chart-2: 195 60% 25%; /* #165467 */
+    --chart-3: 240 2% 72%; /* #B8B6B7 */
+    --chart-4: 0 0% 100%; /* Blanco puro */
+    --chart-5: 0 0% 0%; /* Negro puro */
 
-    --sidebar-background: 225 55% 18%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 145 63% 49%;
+    --sidebar-background: 195 60% 20%;
+    --sidebar-foreground: 240 2% 72%;
+    --sidebar-primary: 195 61% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 55% 25%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 225 55% 28%;
+    --sidebar-accent: 195 60% 30%;
+    --sidebar-accent-foreground: 240 2% 72%;
+    --sidebar-border: 195 60% 25%;
     --sidebar-ring: 145 63% 55%;
   }
 }
@@ -109,5 +98,17 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .bg-gray-light {
+    background-color: hsl(240 2% 72%);
+  }
+  .bg-gray-light\/80 {
+    background-color: hsl(240 2% 72% / 0.8);
+  }
+  .bg-gray-light\/60 {
+    background-color: hsl(240 2% 72% / 0.6);
   }
 }

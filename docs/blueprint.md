@@ -1,4 +1,4 @@
-# **App Name**: FinAI Advisor
+# **App Name**: Horizont
 
 ## Core Features:
 

@@ -55,7 +55,7 @@ export function SocialProofSection({ testimonials }: SocialProofSectionProps) {
 
         {/* Placeholder for client logos - to be filled manually */}
         <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold text-card-foreground mb-6">Algunas empresas que ya potencian sus finanzas con FinAI Advisor:</h3>
+          <h3 className="text-xl font-semibold text-card-foreground mb-6">Algunas empresas que ya potencian sus finanzas con Horizont:</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
             {['LogoEmpresa1', 'LogoEmpresa2', 'LogoEmpresa3', 'LogoEmpresa4'].map(logo => (
                  <Image key={logo} src={`https://placehold.co/120x60.png?text=${logo}`} alt={logo} width={120} height={60} className="grayscale hover:grayscale-0 transition-all" data-ai-hint="company logo finance" />
