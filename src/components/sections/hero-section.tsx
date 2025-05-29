@@ -1,22 +1,19 @@
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex items-center justify-center text-center text-white overflow-hidden">
-      <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Fondo abstracto tecnológico"
-        fill={true}
-        style={{objectFit:"cover"}}
-        quality={80}
-        className="absolute z-0 opacity-30"
-        data-ai-hint="abstract technology finance"
-        priority
-      />
+    <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex items-center justify-center text-center text-white overflow-hidden">      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
+      >
+        <source src={`/videos/Video Hero.mp4?v=${Date.now()}`} type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-0"></div>
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
