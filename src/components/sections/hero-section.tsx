@@ -1,41 +1,35 @@
-
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react'; // Importar ArrowDown
 
 export function HeroSection() {
   return (
-    <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex items-center justify-center text-center text-white overflow-hidden">      <video
+    <section className="relative h-screen w-full flex items-center justify-center text-center text-white overflow-hidden">
+      <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src={`/videos/Video Hero.mp4?v=${Date.now()}`} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-0"></div>
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="block">Transformando las finanzas</span>
-          <span className="block text-primary">con Datos Inteligentes</span>
+        <h1
+          className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          style={{ color: '#EFEFEF' }} // Aplicar color de texto específico
+        >
+          <span className="block">Transformando datos</span>
+          <span className="block">con Inteligencia</span>
         </h1>
-        <p className="mt-6 max-w-lg mx-auto text-lg text-foreground/80 sm:max-w-xl md:text-xl lg:text-2xl">
-          La Plataforma Definitiva para la inversión asistida por IA, uniendo análisis humano y automatizado para optimizar tus ganancias.
+      </div>
+      {/* Indicador de Scroll to Explore */}
+      <div 
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20"
+      >
+        <ArrowDown className="h-6 w-6 animate-bounce" style={{ color: '#EFEFEF' }} />
+        <p className="mt-2 text-sm tracking-wider" style={{ color: '#EFEFEF' }}>
+          Scroll to Explore
         </p>
-        <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-          <Button asChild size="lg" className="group">
-            <Link href="#contacto">
-              Solicitar Demo
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="ml-0 mt-4 sm:mt-0 sm:ml-4 group">
-            <Link href="#producto">
-              Explorar Plataforma
-            </Link>
-          </Button>
-        </div>
       </div>
     </section>
   );
