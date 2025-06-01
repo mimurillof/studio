@@ -28,11 +28,17 @@
     }
 }
 
-/* Video de fondo (si se usa) */
+/* Video de fondo fijo - solo visible en hero */
 .ptcom-design__heroVideoFrame__190xlxe {
     inset: 0;
     position: fixed;
     z-index: 1;
+    width: 100%;
+    height: 100vh; /* Solo la altura del viewport */
+    overflow: hidden;
+    pointer-events: none; /* Para que no interfiera con la interacción */
+    opacity: 1; /* Se controla por JS */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .ptcom-design__heroVideo__190xlxe {
@@ -41,7 +47,7 @@
     object-fit: cover;
     -o-object-position: right bottom;
     object-position: right bottom;
-    opacity: 0; /* ¡Inicialmente opacidad 0, animada por JS! */
+    opacity: 0; /* Inicialmente opacidad 0, animada por JS */
     width: 100%;
 }
 
@@ -79,7 +85,7 @@
 
 /* CSS para los elementos .polyline */
 .polyline {
-    clip-path: polygon(0 0,100% 0,100% 0,0 0); /* Recortado inicialmente */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); /* Recortado desde arriba, para la nueva animación */
 }
 
 .ptcom-design__heroContent__190xlxe {
@@ -130,4 +136,144 @@
     .ptcom-design__heroList__190xlxe li {
         width:calc(50% - 16px);
     }
+}
+
+/* --- ESTILOS PARA LA SECCIÓN DE TRANSICIÓN CON SCROLL --- */
+.ptcom-design__headerSectionWrap__1a95jg7 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.ptcom-design__headerSection__1a95jg7 {
+    background-color: #f0f0f0;
+    color: #202426;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ptcom-design__headerSectionOverlay__1a95jg7 {
+    background-color: #1e1f2b;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 3;
+}
+
+.ptcom-design__subHeader__1a95jg7 {
+    color: #1e1f2b;
+    left: 0;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+@media (max-width: 59.9375em) {
+    .ptcom-design__subHeader__1a95jg7 {
+        top: 82px;
+    }
+}
+
+.ptcom-design__subHeader__13ywd4e {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    letter-spacing: -.03em;
+    line-height: 1;
+    opacity: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.ptcom-design__subHeader__13ywd4e a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ptcom-design__subHeader__13ywd4e a:hover {
+    text-decoration: underline;
+}
+
+.ptcom-design__headline__1a95jg7 {
+    font-size: 40px;
+    letter-spacing: -.04em;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 47.5em) {
+    .ptcom-design__headline__1a95jg7 {
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 75em) {
+    .ptcom-design__headline__1a95jg7 {
+        font-size: 96px;
+    }
+}
+
+.ptcom-design__headlineText__1a95jg7 {
+    display: block;
+}
+
+.ptcom-design__highlight__1a95jg7 {
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: block;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.ptcom-design__subFooter__1a95jg7 {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.ptcom-design__subFooter__ddgibq {
+    text-align: center;
+}
+
+.ptcom-design__subFooterText__ddgibq,
+.ptcom-design__scrollIconText__ddgibq {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.ptcom-design__scrollIcon__ddgibq {
+    margin: 0 auto;
+}
+
+/* Utilidades */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

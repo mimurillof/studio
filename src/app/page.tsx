@@ -2,6 +2,7 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/sections/hero-section';
+import { ScrollTransitionSection } from '@/components/sections/scroll-transition-section';
 import { FeaturePresentationSection } from '@/components/sections/feature-presentation-section';
 import { SocialProofSection } from '@/components/sections/social-proof-section';
 import { ValuePropositionSection } from '@/components/sections/value-proposition-section';
@@ -25,18 +26,19 @@ export default async function HomePage() {
       ]
     };
   }
-
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <Header />
-      <main className="flex-grow">
+      <Header />      <main className="flex-grow relative z-10 bg-background">
         <HeroSection />
-        <FeaturePresentationSection />
-        <ValuePropositionSection />
-        <SocialProofSection testimonials={testimonialsData.testimonials} />
-        <AboutUsSection />
-        <LeadMagnetCtaSection />
-        <ContactSection />
+        <ScrollTransitionSection />
+        <div className="relative z-10 bg-background">
+          <FeaturePresentationSection />
+          <ValuePropositionSection />
+          <SocialProofSection testimonials={testimonialsData.testimonials} />
+          <AboutUsSection />
+          <LeadMagnetCtaSection />
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>

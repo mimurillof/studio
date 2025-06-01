@@ -1,5 +1,5 @@
 
-import { Header } fro          <p>Estos Términos de Servicio constituyen un acuerdo legalmente vinculante hecho entre tú, ya sea personalmente o en nombre de una entidad ("tú") y Horizont ("Compañía", "nosotros", "nos", o "nuestro"), concerniente a tu acceso y uso del sitio web Horizont así como cualquier otra forma de medio, canal de medios, sitio web móvil o aplicación móvil relacionada, enlazada, o de otra manera conectada a ello (colectivamente, el "Sitio").</p> '@/components/layout/header';
+import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';

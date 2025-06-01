@@ -113,4 +113,36 @@ body {
   .bg-gray-light\/60 {
     background-color: hsl(240 2% 72% / 0.6);
   }
+  
+  /* Utilidad para accesibilidad */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /* Asegurar que las secciones principales tengan fondo y z-index adecuados */
+  section {
+    position: relative;
+    z-index: 10;
+    background-color: var(--background);
+  }
+
+  /* Específicamente para el main content */
+  main {
+    position: relative;
+    z-index: 10;
+    background-color: var(--background);
+  }
+
+  /* Asegurar que el header y footer tengan z-index alto */
+  header, footer {
+    position: relative;
+    z-index: 20;
+  }
 }
