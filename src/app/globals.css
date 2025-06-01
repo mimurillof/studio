@@ -1,4 +1,4 @@
-
+@import '../components/sections/horizon-animation.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +16,9 @@ body {
     --card-foreground: 240 2% 72%;
 
     --popover: 195 60% 20%; /* Más oscuro que card */
-    --popover-foreground: 240 2% 72%;    --primary: 195 61% 53%; /* #36A8DC Azul claro principal */
+    --popover-foreground: 240 2% 72%;
+
+    --primary: 195 61% 53%; /* #36A8DC Azul claro principal */
     --primary-foreground: 0 0% 100%; /* Blanco puro sobre azul */
 
     --secondary: 0 0% 100%; /* Blanco puro para elementos secundarios */

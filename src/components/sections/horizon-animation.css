@@ -1,0 +1,133 @@
+/* CSS general del cuerpo para que el logo se vea bien sobre un fondo oscuro */
+/* No aplicaremos body directamente aquí, se asume que globals.css o layout lo manejan */
+
+/* --- CSS del componente HORIZON --- */
+.ptcom-design__hero__190xlxe {
+    background-color: rgba(0,0,0,.15);
+    color: #efefef; /* Heredado por el SVG si el padre tiene currentColor */
+    display: grid;
+    min-height: 100vh; /* Asegura que el contenedor tenga la altura de la ventana */
+    padding: 100px 40px;
+    place-items: end start;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box; /* Añadido para consistencia */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+    font-family: Arial, sans-serif; /* Fuente de respaldo */
+}
+
+@media (min-width: 35em) {
+    .ptcom-design__hero__190xlxe {
+        padding:40px;
+    }
+}
+
+@media (max-width: 1061px) {
+    .ptcom-design__hero__190xlxe {
+        grid-template-rows:1fr auto;
+    }
+}
+
+/* Video de fondo (si se usa) */
+.ptcom-design__heroVideoFrame__190xlxe {
+    inset: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.ptcom-design__heroVideo__190xlxe {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: right bottom;
+    object-position: right bottom;
+    opacity: 0; /* ¡Inicialmente opacidad 0, animada por JS! */
+    width: 100%;
+}
+
+@media (max-width: 59.9375em) {
+    .ptcom-design__heroVideo__190xlxe {
+        -o-object-position:center center;
+        object-position: center center;
+    }
+}
+
+/* CSS para el SVG y las letras */
+.ptcom-design__logo__190xlxe {
+    grid-column: 1/-1;
+    height: auto;
+    max-width: 100%;
+}
+
+.ptcom-design__hero__190xlxe .letter {
+    opacity: 0; /* Opacidad inicial para GSAP */
+}
+
+@media (max-width: 1061px) {
+    .ptcom-design__logo__190xlxe {
+        grid-column:1/-1;
+        grid-row: 2/-1;
+    }
+}
+
+@media (max-width: 761px) {
+    .ptcom-design__logo__190xlxe {
+        grid-column:1/-1;
+        grid-row: 3/-1;
+    }
+}
+
+/* CSS para los elementos .polyline */
+.polyline {
+    clip-path: polygon(0 0,100% 0,100% 0,0 0); /* Recortado inicialmente */
+}
+
+.ptcom-design__heroContent__190xlxe {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (min-width: 60em) {
+    .ptcom-design__heroContent__190xlxe {
+        align-items:end;
+        flex-direction: row;
+    }
+}
+
+.ptcom-design__heroList__190xlxe {
+    display: flex;
+    font-size: 10px;
+    font-weight: 500;
+    gap: 16px;
+    letter-spacing: .05em; /* Ajustado para CSS */
+    line-height: 12px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+@media (min-width: 60em) {
+    .ptcom-design__heroList__190xlxe {
+        flex-direction:column;
+    }
+}
+
+@media (max-width: 34.9375em) {
+    .ptcom-design__heroList__190xlxe {
+        flex-wrap:wrap;
+    }
+}
+
+.ptcom-design__heroList__190xlxe li {
+    border-left: 1px solid #efefef;
+    list-style-type: none;
+    padding-left: .5rem;
+}
+
+@media (max-width: 34.9375em) {
+    .ptcom-design__heroList__190xlxe li {
+        width:calc(50% - 16px);
+    }
+}
