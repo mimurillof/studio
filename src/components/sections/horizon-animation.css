@@ -241,13 +241,13 @@
 }
 
 .ptcom-design__subFooter__1a95jg7 {
-    bottom: 0;
+    bottom: 60px; /* Ajustado para subir el elemento */
     left: 0;
     position: absolute;
     width: 100%;
     z-index: 4;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px; /* Mantenemos el padding general */
     opacity: 0;
     transform: translateY(50%);
 }
@@ -258,8 +258,15 @@
 
 .ptcom-design__subFooterText__ddgibq,
 .ptcom-design__scrollIconText__ddgibq {
-    font-size: 12px;
+    font-size: 12px; /* El tamaño de .scrollIconText se mantiene */
     margin: 5px 0;
+}
+
+/* Estilos específicos para el texto principal del subFooter */
+.ptcom-design__subFooterText__ddgibq {
+    font-size: 18px; /* Aumentado el tamaño de la fuente */
+    line-height: 1.4; /* Mejorado el interlineado */
+    margin-bottom: 15px; /* Aumentado el margen inferior para separar del icono */
 }
 
 .ptcom-design__scrollIcon__ddgibq {
