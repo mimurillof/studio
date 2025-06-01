@@ -236,8 +236,8 @@
     background-clip: text;
     display: block;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: translateY(50%);
+    opacity: 0; /* Para la animación de aparición con GSAP */
+    transform: translateY(50%); /* Para la animación de aparición con GSAP */
 }
 
 .ptcom-design__subFooter__1a95jg7 {
