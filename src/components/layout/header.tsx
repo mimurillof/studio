@@ -66,7 +66,7 @@ export function Header() {
 						<Button
 							variant="ghost"
 							size="icon"
-							className="text-gray-300 hover:text-primary hover:bg-white/10"
+							className="bg-[#1e2124] text-white border border-white hover:bg-[#2c2f33] hover:text-white"
 						>
 							<Search className="h-5 w-5" />
 							<span className="sr-only">Buscar</span>
@@ -75,7 +75,7 @@ export function Header() {
 						{/* Botón Get Started */}
 						<Button
 							variant="outline"
-							className="hidden sm:flex bg-transparent text-gray-300 border-gray-300 hover:bg-white/10 hover:text-primary"
+							className="hidden sm:flex bg-[#1e2124] text-white border border-white hover:bg-[#2c2f33] hover:text-white"
 						>
 							Get Started
 						</Button>
@@ -86,7 +86,7 @@ export function Header() {
 								<Button
 									variant="ghost"
 									size="icon"
-									className="text-gray-300 hover:text-primary hover:bg-white/10"
+									className="bg-[#1e2124] text-white border border-white hover:bg-[#2c2f33] hover:text-white"
 								>
 									<Menu className="h-6 w-6" />
 									<span className="sr-only">Abrir menú</span>
