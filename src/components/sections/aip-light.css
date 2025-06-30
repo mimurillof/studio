@@ -1,0 +1,389 @@
+/* Styles extracted from big-aip-light.html */
+
+/* ========== EXTRACTED PALANTIR STYLES ========== */
+
+/* Variables CSS base */
+.aip-page,
+.home-page {
+  --dark: #1e1f2b;
+  --light: #efefef;
+  --gutter: 30px;
+  --v-gutter: 2.7777777778rem;
+  --max-width: 1728px;
+  --h-spacing: 30px;
+  --section-v-spacing: 60px;
+  --grid: repeat(12, minmax(10px, 1fr));
+}
+
+@media (min-width: 35em) {
+  .aip-page,
+  .home-page {
+    --v-gutter: 5.5555555556rem;
+    --h-spacing: 60px;
+  }
+}
+
+/* Background containers */
+.bg-aip-light {
+  background-color: #efefef;
+  padding-block: 30px;
+}
+
+@media (min-width: 960px) {
+  .bg-aip-light {
+    padding-block: 60px;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1728px;
+  padding-inline: 30px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    padding-inline: 60px;
+  }
+}
+
+/* Video styles */
+.gotham-video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Tab Section Styles */
+.ptcom-design__tabSection__1oqxfyp {
+  --tab-bg: #fff;
+  --tab-header-color: #202426;
+  --tab-desc-color: var(--text-color-light, #767676);
+  --tab-index-color: #dbdbdb;
+  --tab-index-active-color: #202426;
+  gap: 40px;
+  grid-template-columns: minmax(auto, 35ch) 1fr;
+  margin-bottom: 142px;
+}
+
+@media (min-width: 60em) {
+  .ptcom-design__tabSection__1oqxfyp {
+    display: grid;
+  }
+}
+
+@media (min-width: 75em) {
+  .ptcom-design__tabSection__1oqxfyp {
+    grid-template-columns: minmax(auto, 50ch) 1fr;
+  }
+}
+
+.ptcom-design__tabSectionAip__1oqxfyp {
+  --tab-bg: #efefef;
+  --tab-header-color: #1e1f2b;
+  --tab-desc-color: #1e1f2b;
+  --tab-index-color: #454256;
+  --tab-index-active-color: #1e1f2b;
+}
+
+/* Tab Header Styles */
+.ptcom-design__tabHeader__1oqxfyp {
+  padding-top: 106px;
+  position: sticky;
+  top: -1px;
+}
+
+.ptcom-design__tabHeaderIndexes__1oqxfyp {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ptcom-design__tabHeaderAction__1oqxfyp {
+  margin-top: var(--gutter);
+}
+
+.ptcom-design__tabHeaderIndexesDivider__1oqxfyp {
+  background-color: var(--tab-index-color);
+  content: "";
+  display: block;
+  height: 1px;
+  left: 4px;
+  position: absolute;
+  right: 4px;
+  top: calc(50% - 1px);
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.ptcom-design__tabHeaderIndex__1oqxfyp {
+  color: var(--tab-index-color);
+  flex-shrink: 0;
+  font-size: 20px;
+  z-index: 5;
+}
+
+.ptcom-design__tabHeaderIndex__1oqxfyp:last-child {
+  text-align: right;
+}
+
+.ptcom-design__tabHeaderIndexActive__1oqxfyp {
+  color: var(--tab-index-active-color);
+  flex-grow: 1;
+}
+
+.ptcom-design__tabBg__1oqxfyp {
+  background-color: var(--tab-bg);
+  padding-inline: 5px;
+}
+
+/* Tab Heading */
+.ptcom-design__tabHeading__1oqxfyp {
+  color: var(--tab-header-color);
+  font-size: 54px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 107%;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 60em) {
+  .ptcom-design__tabHeading__1oqxfyp {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .ptcom-design__tabHeading__1oqxfyp {
+    font-size: 72px;
+  }
+}
+
+/* Tab Description */
+.ptcom-design__tabDesc__1oqxfyp {
+  color: var(--tab-desc-color);
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  margin-bottom: 70px;
+  max-width: 720px;
+}
+
+@media (min-width: 60em) {
+  .ptcom-design__tabDesc__1oqxfyp {
+    padding-top: 170px;
+  }
+}
+
+.ptcom-design__tabDesc__1oqxfyp p + p {
+  margin-top: 40px;
+}
+
+/* Index Text */
+.ptcom-design__indexTextActive__1oqxfyp,
+.ptcom-design__indexText__1oqxfyp {
+  opacity: 0;
+}
+
+.ptcom-design__indexTextActive__1oqxfyp:before {
+  content: "[";
+}
+
+.ptcom-design__indexTextActive__1oqxfyp:after {
+  content: "]";
+}
+
+/* Switch Container */
+.ptcom-design__switchContainer__496b3x {
+  display: column;
+  gap: var(--gutter);
+}
+
+.ptcom-design__switchContainerDark__496b3x {
+  --tab-bubble-bg: #1e1f2b;
+  --tab-bubble-color: #1e1f2b;
+  --tab-bubble-selected-color: #efefef;
+}
+
+/* Tabs */
+.ptcom-design__tabs__496b3x {
+  border: 1px solid #aaa;
+  border-radius: 99em;
+  display: inline-flex;
+  margin-bottom: 72px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.ptcom-design__tab__496b3x {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--tab-bubble-color);
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 1;
+  padding: 11px 24px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+.ptcom-design__tabSelected__496b3x {
+  color: var(--tab-bubble-selected-color);
+}
+
+.ptcom-design__tabText__496b3x {
+  font-size: 14px;
+  height: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tab Content */
+.ptcom-design__tabContent__496b3x {
+  border-radius: 10px;
+  color: var(--dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.ptcom-design__bubble__496b3x {
+  background-color: var(--tab-bubble-bg);
+  border-radius: 99em;
+  color: var(--tab-bubble-color);
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.ptcom-design__mask__496b3x {
+  background-color: #595959;
+  inset: -50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(100%) skew(15deg, 0);
+}
+
+.ptcom-design__border__496b3x {
+  border: 1px solid #000;
+}
+
+/* ---------- local helpers ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #efefef;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Segoe UI", sans-serif;
+}
+
+/* letter-by-letter animation */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.section-active .letter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* index (0.1, 0.2, …) fade-in */
+.ptcom-design__indexText__1oqxfyp,
+.ptcom-design__indexTextActive__1oqxfyp {
+  transition: opacity 0.4s ease-out 0.25s;
+}
+.section-active .ptcom-design__indexText__1oqxfyp,
+.section-active .ptcom-design__indexTextActive__1oqxfyp {
+  opacity: 1 !important;
+}
+
+/* divider slide */
+.ptcom-design__tabHeaderIndexesDivider__1oqxfyp {
+  transition: transform 0.6s ease-out;
+}
+.section-active .ptcom-design__tabHeaderIndexesDivider__1oqxfyp {
+  transform: translateX(0) !important;
+}
+
+/* video reveal mask */
+.ptcom-design__mask__496b3x {
+  transition: transform 1.1s ease-out;
+}
+.section-active .ptcom-design__mask__496b3x {
+  transform: translateX(100%) skew(15deg, 0) !important;
+}
+
+/* convenience – ensure sections have some min height on very small screens */
+.ptcom-design__tabSection__1oqxfyp {
+  min-height: 100vh;
+}
+
+/* Glitch effect for tab buttons */
+@keyframes glitchFlicker {
+  0% { opacity: 1; }
+  2% { opacity: 1; }
+  3% { opacity: 0.1; }
+  5% { opacity: 0.1; }
+  6% { opacity: 1; }
+  8% { opacity: 1; }
+  9% { opacity: 0.1; }
+  11% { opacity: 0.1; }
+  12% { opacity: 1; }
+  14% { opacity: 1; }
+  15% { opacity: 0; }
+  17% { opacity: 0; }
+  18% { opacity: 1; }
+  20% { opacity: 1; }
+  21% { opacity: 0.1; }
+  23% { opacity: 0.1; }
+  24% { opacity: 1; }
+  90% { opacity: 1; }
+  to { opacity: 1; }
+}
+
+@keyframes glitchShadow {
+  0% { text-shadow: 0 0 0 transparent; }
+  3% { text-shadow: 2px 0 0 #ff0000, -2px 0 0 #00ffff; }
+  6% { text-shadow: 0 0 0 transparent; }
+  9% { text-shadow: -1px 0 0 #ff0000, 1px 0 0 #00ffff; }
+  12% { text-shadow: 0 0 0 transparent; }
+  15% { text-shadow: 1px 0 0 #ff0000, -1px 0 0 #00ffff; }
+  18% { text-shadow: 0 0 0 transparent; }
+  21% { text-shadow: 2px 0 0 #ff0000, -2px 0 0 #00ffff; }
+  24% { text-shadow: 0 0 0 transparent; }
+  90% { text-shadow: 0 0 0 transparent; }
+  to { text-shadow: 0 0 0 transparent; }
+}
+
+@keyframes glitchTransform {
+  0% { transform: translate(0); }
+  3% { transform: translate(-1px, 1px); }
+  6% { transform: translate(0); }
+  9% { transform: translate(1px, -1px); }
+  12% { transform: translate(0); }
+  15% { transform: translate(-1px, -1px); }
+  18% { transform: translate(0); }
+  21% { transform: translate(1px, 1px); }
+  24% { transform: translate(0); }
+  90% { transform: translate(0); }
+  to { transform: translate(0); }
+}
+
+/* Glitch effect on tab buttons */
+.ptcom-design__tab__496b3x.glitch-active {
+  animation: 
+    glitchFlicker 0.6s ease-in-out,
+    glitchShadow 0.6s ease-in-out,
+    glitchTransform 0.6s ease-in-out;
+}
+
+.ptcom-design__tab__496b3x.glitch-active .ptcom-design__tabText__496b3x {
+  animation: 
+    glitchFlicker 0.6s ease-in-out,
+    glitchShadow 0.6s ease-in-out;
+} 
