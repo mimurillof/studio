@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -67,20 +66,20 @@ export function ContactSection() {
             <div>
               <h3 className="text-xl font-semibold text-primary mb-2 flex items-center"><Mail className="mr-3 h-6 w-6"/>Email</h3>
               <p className="text-muted-foreground">
-                <a href="mailto:contacto@finaivisor.com" className="hover:underline">contacto@finaivisor.com</a>
+                <a href="mailto:miguel_amurillof@soy.sena.edu.co" className="hover:underline">miguel_amurillof@soy.sena.edu.co</a>
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-primary mb-2 flex items-center"><Phone className="mr-3 h-6 w-6"/>Teléfono</h3>
-              <p className="text-muted-foreground">+34 900 123 456</p>
+              <p className="text-muted-foreground">+57 3223011933</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-primary mb-2 flex items-center"><MapPin className="mr-3 h-6 w-6"/>Oficina</h3>
-              <p className="text-muted-foreground">Calle Innovación 123, Parque Tecnológico, Valencia, España</p>
+              <p className="text-muted-foreground">Bogotá D.C., Colombia</p>
             </div>
             <div className="pt-4">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.090442280704!2d-0.3762891846320994!3d39.46990747948608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cfdd97953%3A0xDEADBEEFDEADBEEF!2sValencia%2C%20Spain!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.893085734553!2d-74.08508232406893!3d4.610114742208676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a57925d253%3A0x53b20e2b3bcd29f4!2sBogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1700000000000!5m2!1ses-419!2sco" 
                 width="100%" 
                 height="250" 
                 style={{border:0}} 

@@ -1,5 +1,5 @@
-# Firebase Studio
+# Horizont
 
-This is a NextJS starter in Firebase Studio.
+This is a NextJS application for Horizont - Transforming finances with intelligent data.
 
 To get started, take a look at src/app/page.tsx.

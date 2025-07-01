@@ -18,8 +18,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Horizont',
-  description: 'Transformando las finanzas con Datos Inteligentes.',
+  title: 'Horizont - Transformando las finanzas con Datos Inteligentes',
+  description: 'Plataforma de análisis financiero impulsada por IA que combina inteligencia artificial con supervisión humana para optimizar decisiones de inversión.',
+  keywords: 'finanzas, inversión, inteligencia artificial, análisis financiero, IA, datos inteligentes',
+  authors: [{ name: 'Horizont' }],
+  creator: 'Horizont',
+  publisher: 'Horizont',
+  robots: 'index, follow',
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
+  openGraph: {
+    title: 'Horizont - Transformando las finanzas con Datos Inteligentes',
+    description: 'Plataforma de análisis financiero impulsada por IA que combina inteligencia artificial con supervisión humana.',
+    type: 'website',
+    locale: 'es_ES',
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/icon.png" type="image/png" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         {children}
         <Toaster />
