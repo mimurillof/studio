@@ -115,19 +115,19 @@ export function SocialProofSection({ testimonials: _ }: SocialProofSectionProps)
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard key={index} testimonial={testimonial} />
               ))}
-            </div>
-            
+        </div>
+
             {/* Second Track (Duplicate for seamless scrolling) */}
             <div className="testimonials-track" aria-hidden="true">
-              {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (
                 <TestimonialCard key={`duplicate-${index}`} testimonial={testimonial} />
               ))}
-            </div>
-          </div>
+                    </div>
+                  </div>
           
           <div className="animated-line">
             <div className="animated-line-rule"></div>
-          </div>
+                  </div>
           
           <div className="footer-cta-container">
             <Link href="#" className="footer-cta footer-cta-light">

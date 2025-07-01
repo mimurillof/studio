@@ -42,6 +42,7 @@
   display: flex;
   overflow-x: hidden;
   margin: 2rem 0;
+  gap: 20px;
 }
 
 /* Track Animation */
@@ -50,11 +51,13 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
+  pointer-events: none;
 }
 
 .testimonials-track > * {
   width: 300px;
   flex-shrink: 0;
+  pointer-events: auto;
 }
 
 @keyframes horizontalScrollingCardsTrack {
@@ -92,6 +95,11 @@
   flex-direction: column;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  border: none;
+  outline: none;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
 }
 
 .testimonial-card::before {
@@ -100,17 +108,15 @@
   right: 0;
   top: 0;
   width: 0;
-  border-left: 2.5em solid var(--body-color-medium);
-  border-top: 2.5em solid var(--body-color);
-  transition: border-left-color 0.3s ease;
+  border-left: 2.5em solid transparent;
+  border-top: 2.5em solid #195466;
+  outline: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .testimonial-card:hover {
   background-color: var(--body-color-light);
-}
-
-.testimonial-card:hover::before {
-  border-left-color: var(--body-color-light);
 }
 
 /* Text Container */
@@ -177,6 +183,16 @@
   .hover-text-container:hover .hover-title-text {
     transform: translateY(-80px);
   }
+
+  /* Ensure hover works when hovering card not only inner container */
+  .testimonial-card:hover .hover-appear-section {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .testimonial-card:hover .hover-title-text {
+    transform: translateY(-80px);
+  }
 }
 
 /* Footer CTA */
@@ -223,4 +239,4 @@
 /* Hide duplicate track from screen readers */
 [aria-hidden="true"] {
   pointer-events: none;
-} 
+}
