@@ -1,0 +1,226 @@
+:root {
+  /* Theme Variables */
+  --body-color: #fff;
+  --body-color-medium: #f3f3f3;
+  --body-color-light: #f9f9f9;
+  --text-color: #1e2124;
+  --text-color-medium: #636363;
+  --text-color-light: #767676;
+  --border-color: currentColor;
+  --rotation-duration: 324s;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 1rem;
+  --spacing-m: 1.5rem;
+  --gutter: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-color: #1e2124;
+    --body-color-medium: #2f3234;
+    --body-color-light: #494a4b;
+    --text-color: #fff;
+    --text-color-medium: #b9b9b9;
+    --text-color-light: #9b9b9b;
+  }
+}
+
+/* Animated Lines */
+.animated-line {
+  height: 1px;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.animated-line-rule {
+  border-top: 1px solid var(--border-color);
+  height: 100%;
+}
+
+/* Cards Container */
+.testimonials-cards {
+  display: flex;
+  overflow-x: hidden;
+  margin: 2rem 0;
+}
+
+/* Track Animation */
+.testimonials-track {
+  animation: horizontalScrollingCardsTrack var(--rotation-duration) linear infinite;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.testimonials-track > * {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@keyframes horizontalScrollingCardsTrack {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Responsive: Disable animation on mobile */
+@media (max-width: 768px) {
+  .testimonials-cards {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonials-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonials-track {
+    animation: none;
+  }
+}
+
+/* Card Styling */
+.testimonial-card {
+  background-color: var(--body-color-medium);
+  padding: var(--spacing-s);
+  position: relative;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  border-left: 2.5em solid var(--body-color-medium);
+  border-top: 2.5em solid var(--body-color);
+  transition: border-left-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  background-color: var(--body-color-light);
+}
+
+.testimonial-card:hover::before {
+  border-left-color: var(--body-color-light);
+}
+
+/* Text Container */
+.hover-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  height: 100%;
+  position: relative;
+}
+
+/* Company Name */
+.hover-earmark-text {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-color-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Quote */
+.hover-title-text {
+  color: var(--text-color);
+  line-height: 1.4;
+  font-size: 1rem;
+  margin-top: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Person Info */
+.hover-appear-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.person-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.hover-logo-text {
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+/* Desktop hover effects */
+@media (min-width: 768px) {
+  .hover-appear-section {
+    position: absolute;
+    bottom: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.3s ease;
+  }
+
+  .hover-text-container:hover .hover-appear-section {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hover-text-container:hover .hover-title-text {
+    transform: translateY(-80px);
+  }
+}
+
+/* Footer CTA */
+.footer-cta-container {
+  display: flex;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.footer-cta {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.footer-cta-light {
+  background: transparent;
+  color: var(--text-color);
+}
+
+.footer-cta-light:hover {
+  background: var(--text-color);
+  color: var(--body-color);
+}
+
+.footer-cta-dark {
+  background: var(--text-color);
+  color: var(--body-color);
+}
+
+.footer-cta-dark:hover {
+  background: transparent;
+  color: var(--text-color);
+}
+
+/* Hide duplicate track from screen readers */
+[aria-hidden="true"] {
+  pointer-events: none;
+} 
