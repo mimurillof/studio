@@ -74,10 +74,11 @@ export function Header() {
 
 						{/* Botón Get Started */}
 						<Button
+							asChild
 							variant="outline"
 							className="hidden sm:flex bg-[#1e2124] text-white border border-white hover:bg-[#2c2f33] hover:text-white"
 						>
-							Get Started
+							<Link href="https://horizon-next-app.vercel.app/">Get Started</Link>
 						</Button>
 
 						{/* Menú desplegable con todas las opciones */}
