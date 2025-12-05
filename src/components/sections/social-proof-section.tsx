@@ -135,7 +135,7 @@ export function SocialProofSection({ testimonials: _ }: SocialProofSectionProps)
               <span>→</span>
             </Link>
             <Link href="#" className="footer-cta footer-cta-dark">
-              <span>Start Building</span>
+              <span>Empieza a usar</span>
               <span>→</span>
             </Link>
           </div>

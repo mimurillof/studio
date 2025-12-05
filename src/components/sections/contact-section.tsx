@@ -37,16 +37,35 @@ export function ContactSection() {
 
   const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log("Contact form data:", data);
-    toast({
-      title: "Mensaje Enviado",
-      description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
-      variant: "default" 
-    });
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error sending email');
+      }
+
+      toast({
+        title: "Mensaje Enviado",
+        description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+        variant: "default" 
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar tu mensaje. Por favor intenta nuevamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
