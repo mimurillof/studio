@@ -32,9 +32,6 @@ export function FeaturePresentationSection() {
     const aiAppVideo = section.querySelector(
       ".ai-app-video"
     ) as HTMLVideoElement;
-    const actionDrivenVideo = section.querySelector(
-      ".action-driven-screen"
-    ) as HTMLVideoElement;
     const automationVideo = section.querySelector(
       ".automation-screen"
     ) as HTMLVideoElement;
@@ -51,15 +48,12 @@ export function FeaturePresentationSection() {
     const dialogsAiApp = gsap.utils.toArray<HTMLElement>(
       ".dialog-ai-app-1, .dialog-ai-app-2, .dialog-ai-app-3"
     );
-    const dialogsActionLogic = gsap.utils.toArray<HTMLElement>(
-      ".dialog-action-logic-1, .dialog-action-logic-2, .dialog-action-logic-3"
-    );
     const dialogsAutomation = gsap.utils.toArray<HTMLElement>(
       ".dialog-automation-1, .dialog-automation-2, .dialog-automation-3"
     );
 
     // --- Configurar videos para video scrubbing ---
-    const videos = [aiAppVideo, actionDrivenVideo, automationVideo];
+    const videos = [aiAppVideo, automationVideo];
     
     // Pausar autoplay y preparar para scrubbing
     videos.forEach((video) => {
@@ -94,26 +88,18 @@ export function FeaturePresentationSection() {
       .to(highlighterBtn[0], { "--highlighter-btn-color": "#efefef" }) // Inicia activo
       .to(browserHeaderText[0], { opacity: 1 }, "<")
 
-      // Transición 1 -> 2
+      // Transición 1 -> 2 (AI App -> Automation)
       .to(highlighterBtn[0], { "--highlighter-btn-color": "#B5B7B6" }, "1")
       .to(browserHeaderText[0], { opacity: 0 }, "1")
       .to(highlighterBtn[1], { "--highlighter-btn-color": "#efefef" }, "1")
-      .to(browserHeaderText[1], { opacity: 1 }, "1")
-
-      // Transición 2 -> 3
-      .to(highlighterBtn[1], { "--highlighter-btn-color": "#B5B7B6" }, "2")
-      .to(browserHeaderText[1], { opacity: 0 }, "2")
-      .to(highlighterBtn[2], { "--highlighter-btn-color": "#efefef" }, "2")
-      .to(browserHeaderText[2], { opacity: 1 }, "2");
+      .to(browserHeaderText[1], { opacity: 1 }, "1");
 
     // Timelines para los videos (solo opacidad, el tiempo se controla con scroll)
     const videoTimeline = gsap
       .timeline()
       .to(aiAppVideo, { opacity: 1 }, 0)
       .to(aiAppVideo, { opacity: 0 }, "1")
-      .to(actionDrivenVideo, { opacity: 1 }, "1")
-      .to(actionDrivenVideo, { opacity: 0 }, "2")
-      .to(automationVideo, { opacity: 1 }, "2");
+      .to(automationVideo, { opacity: 1 }, "1");
 
     // Timelines para los beacons (círculos) - con posiciones dinámicas por sección
     const beaconTimeline = gsap
@@ -148,33 +134,6 @@ export function FeaturePresentationSection() {
       .to(beaconCText, { opacity: 1 }, "aiAppDialog3")
       .to(beaconC, { opacity: 0.2 }, "aiAppDialog3+=1")
       .to(beaconCText, { opacity: 0.2 }, "aiAppDialog3+=1")
-
-      // === SECCIÓN ACTION LOGIC ===
-      // Reposicionar beacons para Action Logic Video
-      .to(beaconA, { attr: { cx: 792, cy: 303 } }, "actionLogicDialog1")
-      .to(beaconAText, { attr: { x: 784, y: 311 } }, "actionLogicDialog1")
-      .to(beaconB, { attr: { cx: 792, cy: 497 } }, "actionLogicDialog1")
-      .to(beaconBText, { attr: { x: 784, y: 505 } }, "actionLogicDialog1")
-      .to(beaconC, { attr: { cx: 1566, cy: 247 } }, "actionLogicDialog1")
-      .to(beaconCText, { attr: { x: 1558, y: 255 } }, "actionLogicDialog1")
-      
-      // Dialog 1 - Beacon A activo
-      .to(beaconA, { opacity: 1 }, "actionLogicDialog1")
-      .to(beaconAText, { opacity: 1 }, "actionLogicDialog1")
-      .to(beaconA, { opacity: 0.2 }, "actionLogicDialog1+=1")
-      .to(beaconAText, { opacity: 0.2 }, "actionLogicDialog1+=1")
-      
-      // Dialog 2 - Beacon B activo
-      .to(beaconB, { opacity: 1 }, "actionLogicDialog2")
-      .to(beaconBText, { opacity: 1 }, "actionLogicDialog2")
-      .to(beaconB, { opacity: 0.2 }, "actionLogicDialog2+=1")
-      .to(beaconBText, { opacity: 0.2 }, "actionLogicDialog2+=1")
-      
-      // Dialog 3 - Beacon C activo
-      .to(beaconC, { opacity: 1 }, "actionLogicDialog3")
-      .to(beaconCText, { opacity: 1 }, "actionLogicDialog3")
-      .to(beaconC, { opacity: 0.2 }, "actionLogicDialog3+=1")
-      .to(beaconCText, { opacity: 0.2 }, "actionLogicDialog3+=1")
 
       // === SECCIÓN AUTOMATION ===
       // Reposicionar beacons para Automation Video
@@ -212,25 +171,6 @@ export function FeaturePresentationSection() {
       .to(dialogsAiApp[1], { opacity: 0, scale: 0.9, y: -20 }, "aiAppDialog2+=1")
       .to(dialogsAiApp[2], { opacity: 1, scale: 1, y: 0 }, "aiAppDialog3")
       .to(dialogsAiApp[2], { opacity: 0, scale: 0.9, y: -20 }, "aiAppDialog3+=1")
-
-      .to(dialogsActionLogic[0], { opacity: 1, scale: 1, y: 0 }, "actionLogicDialog1")
-      .to(
-        dialogsActionLogic[0],
-        { opacity: 0, scale: 0.9, y: -20 },
-        "actionLogicDialog1+=1"
-      )
-      .to(dialogsActionLogic[1], { opacity: 1, scale: 1, y: 0 }, "actionLogicDialog2")
-      .to(
-        dialogsActionLogic[1],
-        { opacity: 0, scale: 0.9, y: -20 },
-        "actionLogicDialog2+=1"
-      )
-      .to(dialogsActionLogic[2], { opacity: 1, scale: 1, y: 0 }, "actionLogicDialog3")
-      .to(
-        dialogsActionLogic[2],
-        { opacity: 0, scale: 0.9, y: -20 },
-        "actionLogicDialog3+=1"
-      )
 
       .to(dialogsAutomation[0], { opacity: 1, scale: 1, y: 0 }, "automationDialog1")
       .to(
@@ -289,38 +229,6 @@ export function FeaturePresentationSection() {
         "aiAppDialog3"
       )
 
-      // === SECCIÓN ACTION LOGIC ===
-      // Dialog 1: Herramientas y orientación
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1227,403 358,403 358,204 1227,204" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog1"
-      )
-      // Dialog 2: Herramientas para proponer acciones
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1227,671 358,671 358,324 1227,324" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog2"
-      )
-      // Dialog 3: Ver automatización vinculada
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1600,292 1532,292 1532,203 1600,203" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog3"
-      )
-
       // === SECCIÓN AUTOMATION ===
       // Dialog 1: Visibilidad de reglas (área superior izquierda)
       .to(
@@ -354,7 +262,7 @@ export function FeaturePresentationSection() {
       );
 
     // --- TIMELINE PRINCIPAL ---
-    const totalDuration = 9; // 3 secciones x 3 diálogos cada una
+    const totalDuration = 6; // 2 secciones x 3 diálogos cada una
 
     const mainTimeline = gsap
       .timeline({
@@ -368,17 +276,13 @@ export function FeaturePresentationSection() {
             const progress = self.progress;
             
             // Video scrubbing: sincronizar tiempo del video con scroll
-            // Sección 1: AI App (0% - 33%)
-            if (progress <= 0.333) {
-              updateVideoTime(aiAppVideo, progress, 0, 0.333);
+            // Sección 1: AI App (0% - 50%)
+            if (progress <= 0.5) {
+              updateVideoTime(aiAppVideo, progress, 0, 0.5);
             }
-            // Sección 2: Action Logic (33% - 66%)
-            else if (progress <= 0.666) {
-              updateVideoTime(actionDrivenVideo, progress, 0.333, 0.666);
-            }
-            // Sección 3: Automation (66% - 100%)
+            // Sección 2: Automation (50% - 100%)
             else {
-              updateVideoTime(automationVideo, progress, 0.666, 1);
+              updateVideoTime(automationVideo, progress, 0.5, 1);
             }
           },
         },
@@ -386,10 +290,8 @@ export function FeaturePresentationSection() {
       .addLabel("start", 0)
       .add(navTimeline, "start")
       .add(videoTimeline, "start")
-      .addLabel("section1_end", totalDuration / 3)
-      .addLabel("section2_start", totalDuration / 3)
-      .addLabel("section2_end", (totalDuration / 3) * 2)
-      .addLabel("section3_start", (totalDuration / 3) * 2)
+      .addLabel("section1_end", totalDuration / 2)
+      .addLabel("section2_start", totalDuration / 2)
       .addLabel("end", totalDuration)
       .add(dialogsTimeline, 0)
       .add(beaconTimeline, 0)
@@ -397,7 +299,7 @@ export function FeaturePresentationSection() {
 
     // Configuración inicial
     gsap.set(highlighterBtn[0], { "--highlighter-btn-color": "#efefef" });
-    gsap.set([...dialogsAiApp, ...dialogsActionLogic, ...dialogsAutomation], {
+    gsap.set([...dialogsAiApp, ...dialogsAutomation], {
       opacity: 0,
       scale: 0.9,
       y: 48,
@@ -433,15 +335,6 @@ export function FeaturePresentationSection() {
                 { "--highlighter-btn-color": "#B5B7B6" } as React.CSSProperties
               }
             >
-              Lógica Dirigida por Acciones
-            </div>
-            <div
-              className="highlighter-btn"
-              data-index="03"
-              style={
-                { "--highlighter-btn-color": "#B5B7B6" } as React.CSSProperties
-              }
-            >
               Automatización
             </div>
           </nav>
@@ -450,9 +343,6 @@ export function FeaturePresentationSection() {
           <div className="browser-header">
             <span className="browser-header-text" style={{ opacity: 1 }}>
               App de IA
-            </span>
-            <span className="browser-header-text" style={{ opacity: 0 }}>
-              Lógica Dirigida por Acciones
             </span>
             <span className="browser-header-text" style={{ opacity: 0 }}>
               Automatización
@@ -578,55 +468,6 @@ export function FeaturePresentationSection() {
               >
                 <source
                   src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764891804/video_1_z2fh0y.mp4"
-                  type="video/mp4"
-                />
-              </video>
-
-              {/* Dialogs para Action Logic */}
-              <div
-                className="dialog dialog-action-logic-1"
-                style={{ opacity: 0 }}
-              >
-                <div className="dialog-icon">
-                  <span className="dialog-letter">A</span>
-                </div>
-                <p>
-                  Dale a tu IA herramientas y orientación sobre cómo realizar su
-                  tarea
-                </p>
-              </div>
-              <div
-                className="dialog dialog-action-logic-2"
-                style={{ opacity: 0 }}
-              >
-                <div className="dialog-icon">
-                  <span className="dialog-letter">B</span>
-                </div>
-                <p>
-                  Las herramientas permiten a la IA proponer y emprender
-                  acciones del mundo real
-                </p>
-              </div>
-              <div
-                className="dialog dialog-action-logic-3"
-                style={{ opacity: 0 }}
-              >
-                <div className="dialog-icon">
-                  <span className="dialog-letter">C</span>
-                </div>
-                <p>Ver automatización vinculada</p>
-              </div>
-
-              {/* Video Action-Driven */}
-              <video
-                className="highlighter-video action-driven-screen"
-                muted
-                playsInline
-                preload="auto"
-                style={{ opacity: 0 }}
-              >
-                <source
-                  src="https://videos.ctfassets.net/xrfr7uokpv1b/6HuTeCsMfrno2wJ53Wj66Z/d14aa29f633d50d7a851a5c0b06430eb/action-driven-logic.mp4"
                   type="video/mp4"
                 />
               </video>
