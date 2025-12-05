@@ -518,7 +518,7 @@ export function FeaturePresentationSection() {
                 style={{ opacity: 0 }}
               >
                 <source
-                  src="https://videos.ctfassets.net/xrfr7uokpv1b/2Uf8djtEDjZCbjoP5Z2WQy/7fa6c904c03390c1cc3ed5a3077b48a7/automation.mp4"
+                  src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764893594/video_2_xnm6ve.mp4"
                   type="video/mp4"
                 />
               </video>
