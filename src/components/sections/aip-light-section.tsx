@@ -143,7 +143,7 @@ export function AipLightSection() {
                       muted
                     >
                       <source
-                        src="https://videos.ctfassets.net/xrfr7uokpv1b/7c7km4JluRKg6jAl2ev8K9/36f8c951a83d94fcd157b138c811cc1e/workflow-builder.mp4"
+                        src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764945513/V%C3%ADdeo_sin_t%C3%ADtulo_Hecho_con_Clipchamp_1_fv3zcx.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -227,7 +227,7 @@ export function AipLightSection() {
                   <div style={{ opacity: 1 }}>
                     <video className="gotham-video" autoPlay loop playsInline muted>
                       <source
-                        src="https://videos.ctfassets.net/xrfr7uokpv1b/yZMDTcftsZFFDvaA09vC9/df497c06a203475e581a7a73c9457f66/aip-evals-product.mp4"
+                        src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764945512/no_Hecho_con_Clipchamp_ymtnxv.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -311,7 +311,7 @@ export function AipLightSection() {
                   <div style={{ opacity: 1 }}>
                     <video className="gotham-video" autoPlay loop playsInline muted>
                       <source
-                        src="https://videos.ctfassets.net/xrfr7uokpv1b/AJSSHfqYFyicvk5T0V5Bg/4def24033d7c3c0dfb6dfb6b43f2aa3a/aip-osdk.mp4"
+                        src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764945518/re_Hecho_con_Clipchamp_qo2lbe.mp4"
                         type="video/mp4"
                       />
                     </video>
@@ -395,7 +395,7 @@ export function AipLightSection() {
                   <div style={{ opacity: 1 }}>
                     <video className="gotham-video" autoPlay loop playsInline muted>
                       <source
-                        src="https://videos.ctfassets.net/xrfr7uokpv1b/2bKyrJp8t1sP8Pz0C9IWko/64023ab262fd1076d40c145b54ebe0d6/aipnow-product.mp4"
+                        src="https://res.cloudinary.com/dmjixvqbn/video/upload/v1764945519/cha_Hecho_con_Clipchamp_dkvl0v.mp4"
                         type="video/mp4"
                       />
                     </video>
