@@ -617,19 +617,7 @@ export function FeaturePresentationSection() {
                 <p>Ver automatización vinculada</p>
               </div>
 
-              {/* Video Action-Driven */}
-              <video
-                className="highlighter-video action-driven-screen"
-                muted
-                playsInline
-                preload="auto"
-                style={{ opacity: 0 }}
-              >
-                <source
-                  src="https://videos.ctfassets.net/xrfr7uokpv1b/6HuTeCsMfrno2wJ53Wj66Z/d14aa29f633d50d7a851a5c0b06430eb/action-driven-logic.mp4"
-                  type="video/mp4"
-                />
-              </video>
+
 
               {/* Dialogs para Automation */}
               <div
