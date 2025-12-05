@@ -111,7 +111,7 @@ export function AipLightSection() {
                 ></div>
               </div>
               <h3 className="ptcom-design__tabHeading__1oqxfyp">
-                Designed for AI workflow builders
+                Inteligencia de Mercado y Sentimiento Social
               </h3>
               <div className="ptcom-design__tabHeaderAction__1oqxfyp"></div>
             </header>
@@ -119,8 +119,7 @@ export function AipLightSection() {
           <div>
             <div className="ptcom-design__tabDesc__1oqxfyp">
               <p>
-                Build AI apps, actions, and agents in Workflow Builder — an intuitive workspace
-                designed with next-gen AI builders in mind.
+                Centraliza el pulso financiero global con un feed de noticias en tiempo real (Yahoo Finance, Bloomberg) y videos integrados. Mide la psicología del inversor al instante mediante un indicador de "Sentimiento Social" (Miedo vs. Codicia), permitiéndote anticipar tendencias antes de que impacten los precios.
               </p>
             </div>
             <div className="ptcom-design__switchContainer__496b3x ptcom-design__switchContainerDark__496b3x">
@@ -202,7 +201,7 @@ export function AipLightSection() {
                 ></div>
               </div>
               <h3 className="ptcom-design__tabHeading__1oqxfyp">
-                Evaluate and ship with confidence
+                Gestión Dinámica de Portafolios
               </h3>
               <div className="ptcom-design__tabHeaderAction__1oqxfyp"></div>
             </header>
@@ -210,8 +209,7 @@ export function AipLightSection() {
           <div>
             <div className="ptcom-design__tabDesc__1oqxfyp">
               <p>
-                Ready your AI-driven workflows for production and iteratively improve them with
-                end-to-end evaluation tooling.
+                Administra tus activos con precisión quirúrgica, permitiendo añadir, modificar o eliminar inversiones mientras visualizas el rendimiento histórico de tu capital. Compara el crecimiento de tu dinero frente a benchmarks del mercado mediante gráficos interactivos que facilitan el seguimiento de tu patrimonio neto.
               </p>
             </div>
             <div className="ptcom-design__switchContainer__496b3x ptcom-design__switchContainerDark__496b3x">
@@ -287,14 +285,16 @@ export function AipLightSection() {
                 ></div>
               </div>
               <h3 className="ptcom-design__tabHeading__1oqxfyp">
-                Accelerated AI application development
+                Analítica Cuantitativa de Grado Institucional
               </h3>
               <div className="ptcom-design__tabHeaderAction__1oqxfyp"></div>
             </header>
           </div>
           <div>
             <div className="ptcom-design__tabDesc__1oqxfyp">
-              <p>Ontology SDK anchors software development in the operational truth of the enterprise.</p>
+              <p>
+                Evalúa la salud financiera de tu estrategia mediante métricas avanzadas como el Ratio de Sharpe, Volatilidad Anualizada y Máximo Drawdown. Utiliza matrices de correlación de calor y desgloses de composición para entender matemáticamente cómo interactúan tus activos y dónde se concentra tu riesgo.
+              </p>
             </div>
             <div className="ptcom-design__switchContainer__496b3x ptcom-design__switchContainerDark__496b3x">
               <div className="ptcom-design__tabs__496b3x">
@@ -369,7 +369,7 @@ export function AipLightSection() {
                 ></div>
               </div>
               <h3 className="ptcom-design__tabHeading__1oqxfyp">
-                Explore curated solutions and examples
+                Asesoría Estratégica con Inteligencia Artificial
               </h3>
               <div className="ptcom-design__tabHeaderAction__1oqxfyp"></div>
             </header>
@@ -377,8 +377,7 @@ export function AipLightSection() {
           <div>
             <div className="ptcom-design__tabDesc__1oqxfyp">
               <p>
-                AIP Now makes it easy to explore pre-built AI applications, examples, and builder
-                starter packs.
+                Potencia tus decisiones con un Agente de IA capaz de diagnosticar tu cartera, detectar anomalías y sugerir estrategias de diversificación mediante un chat interactivo. Genera reportes automáticos que transforman datos complejos en resúmenes ejecutivos y recomendaciones de rebalanceo accionables.
               </p>
             </div>
             <div className="ptcom-design__switchContainer__496b3x ptcom-design__switchContainerDark__496b3x">

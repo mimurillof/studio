@@ -203,13 +203,13 @@ export function FeaturePresentationSection() {
       .set([beaconAText, beaconBText, beaconCText], { opacity: 0.2 })
       
       // === SECCIÓN AI APP ===
-      // Posicionar beacons para AI App Video
-      .to(beaconA, { attr: { cx: 844, cy: 175 } }, 0)
-      .to(beaconAText, { attr: { x: 836, y: 183 } }, 0)
-      .to(beaconB, { attr: { cx: 844, cy: 483 } }, 0)
-      .to(beaconBText, { attr: { x: 836, y: 491 } }, 0)
-      .to(beaconC, { attr: { cx: 1426, cy: 463 } }, 0)
-      .to(beaconCText, { attr: { x: 1418, y: 471 } }, 0)
+      // Posicionar beacons para AI App Video (dentro de las áreas de máscara)
+      .to(beaconA, { attr: { cx: 490, cy: 330 } }, 0)      // Centro área noticias
+      .to(beaconAText, { attr: { x: 482, y: 338 } }, 0)
+      .to(beaconB, { attr: { cx: 490, cy: 740 } }, 0)      // Centro área artículos
+      .to(beaconBText, { attr: { x: 482, y: 748 } }, 0)
+      .to(beaconC, { attr: { cx: 1240, cy: 600 } }, 0)     // Centro panel derecho
+      .to(beaconCText, { attr: { x: 1232, y: 608 } }, 0)
       
       // Dialog 1 - Beacon A activo
       .to(beaconA, { opacity: 1 }, "aiAppDialog1")
@@ -235,19 +235,19 @@ export function FeaturePresentationSection() {
       .to([beaconAText, beaconBText, beaconCText], { opacity: 0, duration: 0.5 }, "sectionTransition1")
 
       // === SECCIÓN ACTION LOGIC ===
-      // Reposicionar beacons (mientras están ocultos)
-      .to(beaconA, { attr: { cx: 792, cy: 303 }, duration: 0.1 }, "sectionTransition1+=0.5")
-      .to(beaconAText, { attr: { x: 784, y: 311 }, duration: 0.1 }, "sectionTransition1+=0.5")
-      .to(beaconB, { attr: { cx: 792, cy: 497 }, duration: 0.1 }, "sectionTransition1+=0.5")
-      .to(beaconBText, { attr: { x: 784, y: 505 }, duration: 0.1 }, "sectionTransition1+=0.5")
-      .to(beaconC, { attr: { cx: 1566, cy: 247 }, duration: 0.1 }, "sectionTransition1+=0.5")
-      .to(beaconCText, { attr: { x: 1558, y: 255 }, duration: 0.1 }, "sectionTransition1+=0.5")
+      // Reposicionar beacons (mientras están ocultos) - Solo usamos A para diálogo D
+      .to(beaconA, { attr: { cx: 775, cy: 425 }, duration: 0.1 }, "sectionTransition1+=0.5")  // Centro área análisis
+      .to(beaconAText, { attr: { x: 767, y: 433 }, duration: 0.1 }, "sectionTransition1+=0.5")
+      .to(beaconB, { attr: { cx: 775, cy: 550 }, duration: 0.1 }, "sectionTransition1+=0.5")
+      .to(beaconBText, { attr: { x: 767, y: 558 }, duration: 0.1 }, "sectionTransition1+=0.5")
+      .to(beaconC, { attr: { cx: 775, cy: 650 }, duration: 0.1 }, "sectionTransition1+=0.5")
+      .to(beaconCText, { attr: { x: 767, y: 658 }, duration: 0.1 }, "sectionTransition1+=0.5")
       
       // Mostrar beacons con baja opacidad después de reposicionar
       .to([beaconA, beaconB, beaconC], { opacity: 0.2, duration: 0.3 }, "sectionTransition1+=0.7")
       .to([beaconAText, beaconBText, beaconCText], { opacity: 0.2, duration: 0.3 }, "sectionTransition1+=0.7")
       
-      // Dialog 1 - Beacon A activo
+      // Dialog D (usa beacon A) - Beacon A activo
       .to(beaconA, { opacity: 1 }, "actionLogicDialog1")
       .to(beaconAText, { opacity: 1 }, "actionLogicDialog1")
       .to(beaconA, { opacity: 0.2 }, "actionLogicDialog1+=1")
@@ -271,13 +271,13 @@ export function FeaturePresentationSection() {
       .to([beaconAText, beaconBText, beaconCText], { opacity: 0, duration: 0.5 }, "sectionTransition2")
 
       // === SECCIÓN AUTOMATION ===
-      // Reposicionar beacons (mientras están ocultos)
-      .to(beaconA, { attr: { cx: 101, cy: 224 }, duration: 0.1 }, "sectionTransition2+=0.5")
-      .to(beaconAText, { attr: { x: 93, y: 232 }, duration: 0.1 }, "sectionTransition2+=0.5")
-      .to(beaconB, { attr: { cx: 1273, cy: 765 }, duration: 0.1 }, "sectionTransition2+=0.5")
-      .to(beaconBText, { attr: { x: 1265, y: 773 }, duration: 0.1 }, "sectionTransition2+=0.5")
-      .to(beaconC, { attr: { cx: 817, cy: 521 }, duration: 0.1 }, "sectionTransition2+=0.5")
-      .to(beaconCText, { attr: { x: 809, y: 529 }, duration: 0.1 }, "sectionTransition2+=0.5")
+      // Reposicionar beacons (mientras están ocultos) - Dentro de las áreas de máscara
+      .to(beaconA, { attr: { cx: 425, cy: 450 }, duration: 0.1 }, "sectionTransition2+=0.5")   // Centro área chat
+      .to(beaconAText, { attr: { x: 417, y: 458 }, duration: 0.1 }, "sectionTransition2+=0.5")
+      .to(beaconB, { attr: { cx: 1000, cy: 450 }, duration: 0.1 }, "sectionTransition2+=0.5")  // Centro respuestas
+      .to(beaconBText, { attr: { x: 992, y: 458 }, duration: 0.1 }, "sectionTransition2+=0.5")
+      .to(beaconC, { attr: { cx: 750, cy: 725 }, duration: 0.1 }, "sectionTransition2+=0.5")   // Centro documentos
+      .to(beaconCText, { attr: { x: 742, y: 733 }, duration: 0.1 }, "sectionTransition2+=0.5")
       
       // Mostrar beacons con baja opacidad después de reposicionar
       .to([beaconA, beaconB, beaconC], { opacity: 0.2, duration: 0.3 }, "sectionTransition2+=0.7")
@@ -349,197 +349,13 @@ export function FeaturePresentationSection() {
         "automationDialog3+=2"
       );
 
-    // Timeline para la máscara SVG (sombras que destacan áreas del video)
+    // Timeline para la máscara SVG - Sin máscaras, video siempre visible
     const maskTimeline = gsap
       .timeline()
-      // Estado inicial - sin área destacada (todo oscuro)
-      .set(svgMaskPolygon, { attr: { points: "0,0 0,0 0,0 0,0" } })
-      
-      // === SECCIÓN AI APP ===
-      // Intro: Área completa visible brevemente
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1600,900 0,900 0,0 1600,0" },
-          duration: 0.3,
-          ease: "power2.inOut"
-        },
-        "aiAppIntro"
-      )
-      // Dialog 1: Destacar área superior donde IA revisa alertas
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1207,287 480,287 480,129 1207,129" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "aiAppDialog1"
-      )
-      // Transición intermedia 1->2
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1207,450 480,450 480,200 1207,200" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "aiAppDialog1+=1.5"
-      )
-      // Dialog 2: Destacar área central donde operadores revisan
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1207,671 480,671 480,390 1207,390" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "aiAppDialog2"
-      )
-      // Transición intermedia 2->3
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1400,580 800,580 800,400 1400,400" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "aiAppDialog2+=1.5"
-      )
-      // Dialog 3: Destacar área lateral - ver lógica subyacente
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1560,509 1292,509 1292,417 1560,417" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "aiAppDialog3"
-      )
+      // Máscara completamente abierta desde el inicio (video totalmente visible)
+      .set(svgMaskPolygon, { attr: { points: "1600,900 0,900 0,0 1600,0" } });
 
-      // === SECCIÓN ACTION LOGIC ===
-      // Transición a sección 2: expandir área
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1400,500 300,500 300,150 1400,150" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog1-=0.3"
-      )
-      // Dialog 1: Herramientas y orientación
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1227,403 358,403 358,204 1227,204" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog1"
-      )
-      // Transición intermedia 1->2
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1227,550 358,550 358,280 1227,280" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog1+=1.5"
-      )
-      // Dialog 2: Herramientas para proponer acciones
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1227,671 358,671 358,324 1227,324" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog2"
-      )
-      // Transición intermedia 2->3
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1500,400 1200,400 1200,200 1500,200" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog2+=1.5"
-      )
-      // Dialog 3: Ver automatización vinculada
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1600,292 1532,292 1532,203 1600,203" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "actionLogicDialog3"
-      )
 
-      // === SECCIÓN AUTOMATION ===
-      // Transición a sección 3: área completa
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1600,900 0,900 0,0 1600,0" },
-          duration: 0.3,
-          ease: "power2.inOut"
-        },
-        "automationDialog1-=0.3"
-      )
-      // Dialog 1: Visibilidad de reglas (área superior izquierda)
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "202,288 0,288 0,160 202,160" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "automationDialog1"
-      )
-      // Transición intermedia 1->2
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "800,600 400,600 400,400 800,400" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "automationDialog1+=1.5"
-      )
-      // Dialog 2: Operadores aprueban acciones (área inferior derecha)
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1436,855 1110,855 1110,675 1436,675" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "automationDialog2"
-      )
-      // Transición intermedia 2->3
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1200,650 500,650 500,420 1200,420" },
-          duration: 0.5,
-          ease: "power2.inOut"
-        },
-        "automationDialog2+=1.5"
-      )
-      // Dialog 3: Lógica activada (área central)
-      .to(
-        svgMaskPolygon,
-        { 
-          attr: { points: "1089,602 546,602 546,440 1089,440" },
-          duration: 0.8,
-          ease: "power2.inOut"
-        },
-        "automationDialog3"
-      );
 
     // --- TIMELINE PRINCIPAL ---
 
@@ -554,13 +370,43 @@ export function FeaturePresentationSection() {
           onUpdate: (self) => {
             const progress = self.progress;
             
-            // Video scrubbing basado en duración real de videos
+            // Video scrubbing con zonas de pausa
             // Primer video (5 scrolls): 0% - 33.3% del scroll
             // Segundo video (10 scrolls): 33.3% - 100% del scroll
             const splitPoint = 5 / 15; // 0.3333...
             
+            // Zonas de pausa para el primer video (normalizadas al rango 0-splitPoint)
+            // Pausa en B: progreso ~8% a ~12% (donde aparece aiAppDialog2)
+            // Pausa en C: progreso ~13% a ~20% (donde aparece aiAppDialog3)
+            const pauseB_start = 0.08;
+            const pauseB_end = 0.12;
+            const pauseC_start = 0.13;
+            const pauseC_end = 0.20;
+            
             if (progress <= splitPoint) {
-              updateVideoTime(aiAppVideo, progress, 0, splitPoint);
+              // Calcular el tiempo de video ajustado con zonas de pausa
+              let adjustedProgress = progress;
+              
+              // Si estamos en zona de pausa B
+              if (progress >= pauseB_start && progress < pauseB_end) {
+                adjustedProgress = pauseB_start; // Congelar en el inicio de pausa B
+              }
+              // Si pasamos la pausa B, ajustar el progreso
+              else if (progress >= pauseB_end && progress < pauseC_start) {
+                // Restar la duración de la pausa B
+                adjustedProgress = progress - (pauseB_end - pauseB_start);
+              }
+              // Si estamos en zona de pausa C
+              else if (progress >= pauseC_start && progress < pauseC_end) {
+                adjustedProgress = pauseC_start - (pauseB_end - pauseB_start); // Congelar
+              }
+              // Si pasamos la pausa C
+              else if (progress >= pauseC_end) {
+                // Restar ambas pausas
+                adjustedProgress = progress - (pauseB_end - pauseB_start) - (pauseC_end - pauseC_start);
+              }
+              
+              updateVideoTime(aiAppVideo, adjustedProgress, 0, splitPoint - (pauseB_end - pauseB_start) - (pauseC_end - pauseC_start));
             }
             // Sección 3: Automation (33.3% - 100%)
             else {
@@ -573,30 +419,30 @@ export function FeaturePresentationSection() {
       .add(navTimeline, "start")
       .add(videoTimeline, "start")
       
-      // === SECCIÓN 1: AI App (0 - 2.5) ===
-      .addLabel("aiAppDialog1", 0.5)
-      .addLabel("aiAppDialog2", 1.2)
-      .addLabel("aiAppDialog3", 2.0)
+      // === SECCIÓN 1: AI App (0 - 5) - Diálogos distribuidos ===
+      .addLabel("aiAppDialog1", 0.5)      // Primer diálogo
+      .addLabel("aiAppDialog2", 2.0)      // Segundo diálogo (más espacio)
+      .addLabel("aiAppDialog3", 3.5)      // Tercer diálogo
       .addLabel("section1_end", section1End)
       
       // Transición suave entre sección 1 y 2
       .addLabel("sectionTransition1", section1End - 0.2)
       .addLabel("section2_start", section1End)
       
-      // === SECCIÓN 2: Action Logic (2.5 - 5) ===
-      .addLabel("actionLogicDialog1", section1End + 0.5) // 3.0
-      .addLabel("actionLogicDialog2", section1End + 1.3) // 3.8
-      .addLabel("actionLogicDialog3", section1End + 2.0) // 4.5
+      // === SECCIÓN 2: Action Logic (5 - 8) - Diálogo D ===
+      .addLabel("actionLogicDialog1", section2End + 0.5)  // 5.5 - Diálogo D
+      .addLabel("actionLogicDialog2", section2End + 1.5)  // 6.5
+      .addLabel("actionLogicDialog3", section2End + 2.5)  // 7.5
       .addLabel("section2_end", section2End)
       
       // Transición suave entre sección 2 y 3
       .addLabel("sectionTransition2", section2End - 0.2)
       .addLabel("section3_start", section2End)
       
-      // === SECCIÓN 3: Automation (5 - 15) ===
-      .addLabel("automationDialog1", section2End + 1)    // 6
-      .addLabel("automationDialog2", section2End + 4.5)  // 9.5
-      .addLabel("automationDialog3", section2End + 8)    // 13
+      // === SECCIÓN 3: Automation (8 - 15) - Diálogos A, B, C distribuidos ===
+      .addLabel("automationDialog1", 9)     // Diálogo A del chat
+      .addLabel("automationDialog2", 11.5)  // Diálogo B respuestas
+      .addLabel("automationDialog3", 14)    // Diálogo C documentos
       .addLabel("end", totalDuration)
       
       .add(dialogsTimeline, 0)
@@ -757,7 +603,7 @@ export function FeaturePresentationSection() {
                   <span className="dialog-letter">A</span>
                 </div>
                 <p>
-                  La IA revisa alertas y propone automáticamente resoluciones
+                  Noticias personalizadas y relevantes para tu portafolio
                 </p>
               </div>
               <div className="dialog dialog-ai-app-2" style={{ opacity: 0 }}>
@@ -765,15 +611,14 @@ export function FeaturePresentationSection() {
                   <span className="dialog-letter">B</span>
                 </div>
                 <p>
-                  Los operadores humanos revisan propuestas para aprobar
-                  resoluciones sugeridas por IA
+                  Busqueda activa de opiniones y analisis de expertos
                 </p>
               </div>
               <div className="dialog dialog-ai-app-3" style={{ opacity: 0 }}>
                 <div className="dialog-icon">
                   <span className="dialog-letter">C</span>
                 </div>
-                <p>Ver lógica subyacente</p>
+                <p>Control total de los activos de tu portafolio</p>
               </div>
 
               {/* Video AI App */}
@@ -796,11 +641,10 @@ export function FeaturePresentationSection() {
                 style={{ opacity: 0 }}
               >
                 <div className="dialog-icon">
-                  <span className="dialog-letter">A</span>
+                  <span className="dialog-letter">D</span>
                 </div>
                 <p>
-                  Dale a tu IA herramientas y orientación sobre cómo realizar su
-                  tarea
+                  Analisis cuantitativo automatico y asistido
                 </p>
               </div>
               <div
@@ -836,8 +680,7 @@ export function FeaturePresentationSection() {
                   <span className="dialog-letter">A</span>
                 </div>
                 <p>
-                  Los operadores humanos tienen total visibilidad de las reglas
-                  de ejecución e historial de automatizaciones
+                  Chat vinculado y personalizado para responder tus preguntas
                 </p>
               </div>
               <div
@@ -848,8 +691,7 @@ export function FeaturePresentationSection() {
                   <span className="dialog-letter">B</span>
                 </div>
                 <p>
-                  Los operadores humanos permanecen en el bucle para aprobar
-                  acciones propuestas por IA
+                  Respuestas rapidas para toma de decisiones
                 </p>
               </div>
               <div
@@ -859,7 +701,7 @@ export function FeaturePresentationSection() {
                 <div className="dialog-icon">
                   <span className="dialog-letter">C</span>
                 </div>
-                <p>Ver lógica activada por esta automatización</p>
+                <p>Añada documentos e imagenes de contexto</p>
               </div>
 
               {/* Video Automation */}
